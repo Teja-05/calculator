@@ -3,6 +3,7 @@ package calculator
 import (
 	"errors"
 	"fmt"
+	"math"
 )
 
 func Calculate(num1 float64, num2 float64, option int) (float64, error) {
@@ -22,6 +23,8 @@ func Calculate(num1 float64, num2 float64, option int) (float64, error) {
 		} else {
 			res = num1 / num2
 		}
+	case 5:
+		res = math.Pow(num1, num2)
 	default:
 		fmt.Println("Enter a valid option")
 		return 0, errors.New("invalid option")

@@ -36,8 +36,13 @@ func TestShouldReturnErrorGivenOption4AndZeroSecondOperand(t *testing.T) {
 	assert.Equal(t, expected, got.Error())
 }
 
+func TestShouldFindPowerOfTwoNumbersGivenOption5(t *testing.T) {
+	expected := float64(25)
+	got, _ := Calculate(5, 2, 5)
+	assert.Equal(t, expected, got)
+}
 func TestShouldReturnErrorGivenInvalidOption(t *testing.T) {
 	expected := "invalid option"
-	_, got := Calculate(5, 0, 5)
+	_, got := Calculate(5, 0, 6)
 	assert.Equal(t, expected, got.Error())
 }
