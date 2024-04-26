@@ -1,4 +1,4 @@
-module github.com/Teja-05/calculator
+module github.com/Teja-05/calculator/v2
 
 go 1.19
 
